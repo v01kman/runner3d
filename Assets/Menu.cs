@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
 	bool isPlaying = false;
 	
 	void Start () 
-	{	
+	{	GameObject.Find("Player").animation.Stop("steveRun");
 		GameObject.Find("Distance Text").guiText.enabled = false;
 		GameObject.Find("Scores Text").guiText.enabled = false;
 		GameObject.Find("Coin Text").guiText.enabled = false;
@@ -97,7 +97,7 @@ public class Menu : MonoBehaviour
 
 			GameObject.Find("Continue Text").guiText.enabled = true;
 			GameObject.Find("Go Main Menu Text").guiText.enabled = true;
-			GameObject.Find("Player").animation.Stop("Take 001");
+			GameObject.Find("Player").animation.Stop("steveRun");
 		}
 		else if (isGoMainMenu)
 		{			
@@ -122,7 +122,7 @@ public class Menu : MonoBehaviour
 			pos = new Vector3(7.1f, 0f, -10f);
 			GameObject.Find("Player Container").transform.position = pos;
 			GameObject.Find("Player").transform.position = pos;
-			GameObject.Find("Player").animation.Play("Take 001");
+			GameObject.Find("Player").animation.Play("steveRun");
 
 			isPlaying = false;
 		}
@@ -136,7 +136,7 @@ public class Menu : MonoBehaviour
 			GameObject.Find("Scores Text").guiText.enabled = true;
 			GameObject.Find("Coin Text").guiText.enabled = true;
 			GameObject.Find("Menu Text").guiText.enabled = true;
-			GameObject.Find("Player").animation.Play("Take 001");
+			GameObject.Find("Player").animation.Play("steveRun");
 		}
 	}
 }

@@ -123,6 +123,8 @@ public class movement : MonoBehaviour
 
 			if (Input.GetKeyDown (KeyCode.W) && !isMoving && !isJumping) 
 			{
+				GameObject.Find("Player").animation.Stop("steveRun");
+				GameObject.Find("Player").animation.Play("steveJump");
 				jmp = new Vector3 (0, 5, 0);
 				isMoving = true;
 				isJumping = true;
