@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
 	bool isPlaying = false;
 	
 	void Start () 
-	{	GameObject.Find("Player").animation.Stop("steveRun");
+	{	
 		GameObject.Find("Distance Text").guiText.enabled = false;
 		GameObject.Find("Scores Text").guiText.enabled = false;
 		GameObject.Find("Coin Text").guiText.enabled = false;
@@ -63,6 +63,7 @@ public class Menu : MonoBehaviour
 			GameObject.Find("Start").animation.Play("Move Box Down");
 			GameObject.Find("Quit").animation.Play("Move Box Down2");
 
+
 			GameObject.Find("Player").GetComponent<movement>().isPlaying = true;
 			GameObject.Find("Player").GetComponent<movement>().isMoving = false;
 			GameObject.Find("Player").GetComponent<Swipe>().isMoving = false;
@@ -97,7 +98,7 @@ public class Menu : MonoBehaviour
 
 			GameObject.Find("Continue Text").guiText.enabled = true;
 			GameObject.Find("Go Main Menu Text").guiText.enabled = true;
-			GameObject.Find("Player").animation.Stop("steveRun");
+			//GameObject.Find("Player").animation.Stop("steveRun");
 		}
 		else if (isGoMainMenu)
 		{			
